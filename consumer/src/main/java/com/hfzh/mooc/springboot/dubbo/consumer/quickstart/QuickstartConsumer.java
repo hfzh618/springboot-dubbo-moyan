@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 
 public class QuickstartConsumer {
 
-    @Reference(url = "dubbo://127.0.0.1:20880")        //配置去哪找url 默认端口 20880
+    @Reference()        //使用zk注册中心
     ServiceAPI serviceAPI;
 
     public void sendMessage(String message){
